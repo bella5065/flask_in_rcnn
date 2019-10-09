@@ -6,9 +6,12 @@ from samples import coco
 from mrcnn import utils
 from mrcnn import model as modellib
 
+#connection from rcnn to flask
 cmd="python3 app.py"
 sys.path.insert(0,'./video_flask/video_flask')
 import app
+#dy and bella import
+
 ROOT_DIR = os.getcwd()
 MODEL_DIR = os.path.join(ROOT_DIR, "logs")
 COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
@@ -131,6 +134,9 @@ if __name__ == '__main__':
 
         # Recording Video
         out.write(frame)
+
+	#put the video to website
+	#dy and bella input
         os.system(cmd)
 
 
